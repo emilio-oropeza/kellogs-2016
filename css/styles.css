@@ -26,9 +26,10 @@
 }
 article{
 	background-image: url("../images/Fondo_contenido.jpg");
-	background-size: cover;
+	background-size: 100% 100%;
 	background-position: center;
 	background-attachment: fixed;
+	background-repeat: no-repeat;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -51,5 +52,7 @@ article{
 
 
 @media screen and (min-width: 767px){
-	
+	article{
+		background-size: cover;
+	}
 }
