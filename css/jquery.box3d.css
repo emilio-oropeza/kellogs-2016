@@ -157,6 +157,7 @@ div#box {
 	}
 	div#box{
 		height: 380px;
+		width: 130px;
 	}
 	#front, #back {
 	    width: 352px;
@@ -189,5 +190,10 @@ div#box {
 		-o-transform: rotateY(90deg) translate3d(0px, 0px, 286px);
 		-ms-transform: rotateY(90deg) translate3d(0px, 0px, 286px);
 		transform: rotateY(90deg) translate3d(0px, 0px, 286px);
+	}
+}
+@media screen and (min-width: 992px){
+	div#box{
+		width: 30px;
 	}
 }

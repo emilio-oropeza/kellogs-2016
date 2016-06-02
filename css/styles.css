@@ -48,6 +48,14 @@ article{
 	#portada-bottom > .container > .row > div:nth-child(2){
 		padding-top: 3%;
 	}
+#cajas > .container {
+	position: relative;
+}
+	#cajas > .container > img{
+		position: absolute;
+		right: 0;
+		bottom: 0; 
+	}
 #videos > .container > .row > div{
 	position: relative;
 	cursor: pointer;
@@ -72,9 +80,17 @@ article{
 	article{
 		background-size: cover;
 	}
+	#cajas > .container > img{
+		width: 115px;
+	}
 	#quiz > .container > div {
 	    width: 200px;
 		height: 70px;
+	}
+}
+@media screen and (min-width: 992px){
+	#cajas > .container > img{
+		width: 195px;
 	}
 }
 @media screen and (min-width: 1200px){
