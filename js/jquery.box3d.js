@@ -38,7 +38,7 @@
 					}
 				},
 				showToIE: function(){
-					console.log("hola");
+					$("#box").css({"transform": "none"});
 				},
 				changeBox: function(pos, el){
 					$(".media").removeClass("active");
