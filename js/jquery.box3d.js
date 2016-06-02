@@ -15,7 +15,7 @@
 				init:function(){
 					$(".media").each(function(i, val){
 						$(this).on("click", function(){
-							componentObj.methods.changeBox((i+1));
+							componentObj.methods.changeBox((i+1), val);
 						});
 					});
 					if(!componentObj.methods.isIE()){
@@ -40,7 +40,9 @@
 				showToIE: function(){
 					console.log("hola");
 				},
-				changeBox: function(pos){
+				changeBox: function(pos, el){
+					$(".media").removeClass("active");
+					$(el).addClass("active");
 					$("#front").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/front.png")'});
 					$("#back").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/back.png")'});
 					$("#left").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/left.png")'});
