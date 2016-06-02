@@ -202,3 +202,8 @@ div#box {
 	    padding: 50px 50px;
 	}
 }
+@media screen and (min-width: 1200px){
+	#caja_sel_cont {
+	    padding: 50px 70px;
+	}
+}
