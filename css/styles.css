@@ -1,0 +1,55 @@
+.img-center{
+	margin: auto;
+}
+.center-abs{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+}
+.subtitulo{
+	padding-top: 120px;
+	padding-bottom: 120px; 
+	font-size: 16px;
+	color: #3d3f42;
+}
+.subtitulo > p{
+	margin-top: 45px;
+}
+.medium{
+	font-weight: 500;
+}
+.regular{
+	font-weight: 400;
+}
+article{
+	background-image: url("../images/Fondo_contenido.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: 'Roboto', sans-serif;
+}
+
+#portada{
+	background-image: url("../images/portada/Portada.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+	#portada-bottom{
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		background-color: #65a5d4;
+	}
+	#portada-bottom > .container > .row > div:nth-child(2){
+		padding-top: 3%;
+	}
+
+
+
+@media screen and (min-width: 767px){
+	
+}
