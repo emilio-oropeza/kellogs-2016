@@ -4,6 +4,13 @@ $(document).ready(function(){
 		$("#portada").height(screenHeight());
 	});
 	$("#caja").box3d();
+	$('.tubos').flipster({
+		buttons: true,
+		start: 1,
+		scrollwheel: false,
+		style: 'flat',
+		spacing: 0
+	});
 });
 
 

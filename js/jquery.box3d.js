@@ -13,13 +13,16 @@
 		var componentObj = {
 			methods:{
 				init:function(){
-					console.log("hoal1");
+					$(".media").each(function(i, val){
+						$(this).on("click", function(){
+							componentObj.methods.changeBox((i+1));
+						});
+					});
 					if(!componentObj.methods.isIE()){
 						var traqball_2 = new Traqball({stage: "box-cont", axis: [0,1,0], angle: 0.7, limitAxxis: "y"})
 						setInterval(function () {
 							traqball_2.setup({stage: "box-cont", limitAxxis: "y"});
 						}, 30000);
-
 					}else{
 						componentObj.methods.showToIE();
 					}
@@ -36,6 +39,12 @@
 				},
 				showToIE: function(){
 					console.log("hola");
+				},
+				changeBox: function(pos){
+					$("#front").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/front.png")'});
+					$("#back").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/back.png")'});
+					$("#left").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/left.png")'});
+					$("#right").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/right.png")'});
 				}
 			}
 		};
