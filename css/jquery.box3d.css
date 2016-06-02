@@ -1,6 +1,6 @@
 #caja_sel_cont{
 	background-image: url("../images/cajas/Caja_nombres.png");
-	background-size: 199px 675px;
+	background-size: 100% 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	padding: 20px 10px;	
@@ -141,6 +141,7 @@ div#box {
 
 @media screen and (min-width: 768px){
 	#caja_sel_cont {
+		background-size: 199px 675px;
 	    padding: 50px 20px;
 		height: 675px;
 	}
