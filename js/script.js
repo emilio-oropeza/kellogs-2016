@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$('a').click(animateScroll);
 	$("#portada").height(screenHeight());
 	$(window).resize(function(){
 		$("#portada").height(screenHeight());
@@ -23,5 +24,11 @@ function barsDisapear(){
 function screenHeight(){
 	var height = $(window).height();
 	return height - 60;
+}
+function animateScroll(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1500);
+    return false;
 }
 
