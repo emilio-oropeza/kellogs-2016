@@ -26,10 +26,10 @@
 }
 article{
 	background-image: url("../images/Fondo_contenido.jpg");
-	background-size: 100% 100vh;
-	background-position: center;
+	background-size: 100%;
+	background-position: center top;
 	background-attachment: fixed;
-	background-repeat: no-repeat;
+	background-repeat: repeat-y;
 	font-family: 'Roboto', sans-serif;
 }
 
