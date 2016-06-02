@@ -12,6 +12,13 @@ $(document).ready(function(){
 		style: 'flat',
 		spacing: 0
 	});
+	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+	    event.preventDefault();
+	    $(this).ekkoLightbox({
+	    	"left_arrow_class": "fa fa-chevron-left",
+			"right_arrow_class": "fa fa-chevron-right"
+	    });
+	});
 });
 
 
