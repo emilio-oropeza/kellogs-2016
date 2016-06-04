@@ -13,6 +13,7 @@
 		var componentObj = {
 			methods:{
 				init:function(){
+					componentObj.methods.loadThumb();
 					$(".media").each(function(i, val){
 						$(this).on("click", function(){
 							componentObj.methods.changeBox((i+1), val);
@@ -26,6 +27,22 @@
 					}else{
 						componentObj.methods.showToIE();
 					}
+				},
+				loadThumb: function(){
+					$(".media").each(function(i, val){
+						var img_container = $(this).find(".media-left");
+						var nombre = $(this).find(".media-body");
+						var img = '';
+						var name = '';
+						if(config.cajas[i].disponible){
+							img = '<img class="img-center img-circle img-responsive" src="images/cajas/thumbs/'+config.cajas[i].img_nombre+'.jpg">';
+							name = config.cajas[i].nombre;
+						}else{
+							img = '<img class="img-center img-circle img-responsive" src="images/cajas/thumbs/blanco.jpg">';
+						}
+						$(img).appendTo($(img_container));
+						$(nombre).text(name);
+					});
 				},
 				isIE: function(){
 					var ua = window.navigator.userAgent;
@@ -41,12 +58,15 @@
 					$("#box").css({"transform": "none"});
 				},
 				changeBox: function(pos, el){
-					$(".media").removeClass("active");
-					$(el).addClass("active");
-					$("#front").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/front.png")'});
-					$("#back").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/back.png")'});
-					$("#left").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/left.png")'});
-					$("#right").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/right.png")'});
+					console.log(config.cajas[(pos-1)].disponible);
+					if(config.cajas[(pos-1)].disponible){
+						$(".media").removeClass("active");
+						$(el).addClass("active");
+						$("#front").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/front.png")'});
+						$("#back").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/back.png")'});
+						$("#left").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/left.png")'});
+						$("#right").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/right.png")'});
+					}
 				}
 			}
 		};

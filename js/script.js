@@ -1,17 +1,11 @@
 $(document).ready(function(){
+	$("article").aprobados();
 	$('a').click(animateScroll);
 	$("#portada").height(screenHeight());
 	$(window).resize(function(){
 		$("#portada").height(screenHeight());
 	});
 	$("#caja").box3d();
-	$('.tubos').flipster({
-		buttons: true,
-		start: 1,
-		scrollwheel: false,
-		style: 'flat',
-		spacing: 0
-	});
 	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
 	    event.preventDefault();
 	    $(this).ekkoLightbox({
