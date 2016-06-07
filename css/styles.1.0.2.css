@@ -53,9 +53,17 @@ article{
 	position: relative;
 }
 	#cajas > .container > img{
+		position: absolute;		
+	}
+	#cajas > .container > img:nth-child(1){
+		right: 10%;
+		bottom: 55%;
+	}
+	#cajas > .container > a > img#download{
 		position: absolute;
 		right: 0;
 		bottom: 0; 
+		cursor: pointer;
 	}
 #videos > .container > .row > div{
 	position: relative;
@@ -87,8 +95,14 @@ article{
 	article{
 		background-size: cover;
 	}
-	#cajas > .container > img{
+	#cajas > .container > img:nth-child(1){
+		right: 0px;
+		bottom: 70px;
 		width: 115px;
+	}
+	#cajas > .container > a > img#download{
+		right: 0;
+		bottom: 0; 
 	}
 	#quiz > .container > div {
 	    width: 200px;
@@ -109,7 +123,7 @@ article{
 	}
 }
 @media screen and (min-width: 992px){
-	#cajas > .container > img{
+	#cajas > .container > img:nth-child(1){
 		width: 195px;
 	}
 }

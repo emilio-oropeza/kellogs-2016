@@ -29,16 +29,17 @@
 					}
 				},
 				loadThumb: function(){
+					$("#cajas > .container > a").attr("href", urlIndepth+'docs/'+config.cajas[0].pdf);
 					$(".media").each(function(i, val){
 						var img_container = $(this).find(".media-left");
 						var nombre = $(this).find(".media-body");
 						var img = '';
 						var name = '';
 						if(config.cajas[i].disponible){
-							img = '<img class="img-center img-circle img-responsive" src="images/cajas/thumbs/'+config.cajas[i].img_nombre+'.jpg">';
+							img = '<img class="img-center img-circle img-responsive" src="'+urlIndepth+'images/cajas/thumbs/'+config.cajas[i].img_nombre+'.jpg">';
 							name = config.cajas[i].nombre;
 						}else{
-							img = '<img class="img-center img-circle img-responsive" src="images/cajas/thumbs/blanco.jpg">';
+							img = '<img class="img-center img-circle img-responsive" src="'+urlIndepth+'images/cajas/thumbs/blanco.jpg">';
 						}
 						$(img).appendTo($(img_container));
 						$(nombre).text(name);
@@ -58,14 +59,14 @@
 					$("#box").css({"transform": "none"});
 				},
 				changeBox: function(pos, el){
-					console.log(config.cajas[(pos-1)].disponible);
 					if(config.cajas[(pos-1)].disponible){
 						$(".media").removeClass("active");
 						$(el).addClass("active");
-						$("#front").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/front.png")'});
-						$("#back").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/back.png")'});
-						$("#left").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/left.png")'});
-						$("#right").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+pos+'/right.png")'});
+						$("#front").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+config.cajas[(pos-1)].caja+'/front.png")'});
+						$("#back").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+config.cajas[(pos-1)].caja+'/back.png")'});
+						$("#left").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+config.cajas[(pos-1)].caja+'/left.png")'});
+						$("#right").css({'background-image':'url("'+urlIndepth+'images/cajas/caja'+config.cajas[(pos-1)].caja+'/right.png")'});
+						$("#cajas > .container > a").attr("href", urlIndepth+'docs/'+config.cajas[(pos-1)].pdf);
 					}
 				}
 			}

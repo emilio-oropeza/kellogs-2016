@@ -20,10 +20,10 @@
 					$(".tubos > ul > li").each(function(i, val){
 						var img = '';
 						if(config.botes[i].disponible){
-							img = '<img class="img-responsive img-center" src="images/botes/'+(i+1)+'.gif">';
+							img = '<img class="img-responsive img-center" src="'+urlIndepth+'images/botes/'+config.botes[i].bote+'.gif">';
 							start++;
 						}else{
-							img = '<img class="img-responsive img-center" src="images/botes/blanco.png">';
+							img = '<img class="img-responsive img-center" src="'+urlIndepth+'images/botes/blanco.png">';
 						}
 						$(img).appendTo($(this));
 					});
