@@ -14,7 +14,7 @@ var config = {
 		{"disponible": true, "bote":1},
 		{"disponible": true, "bote":2},
 		{"disponible": true, "bote":7},
-		{"disponible": false, "bote":3},
+		{"disponible": true, "bote":3},
 		{"disponible": false, "bote":4},
 		{"disponible": false, "bote":5},
 		{"disponible": false, "bote":6},
